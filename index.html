@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title></title>
+  </head>
+  <body>
+    <!-- INSERT YOUR DATA -->
+    <h2 class="ticketquote">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+    <div class="line1">
+      <div class="upperdata">
+        <div class="setting">
+          <label for="nome-utente">Nome cognome</label>
+          <input id="nome-utente" type="text" placeholder="Inserisci il tuo nome">
+        </div>
+        <div class="setting">
+          <label for="km">Km da percorrere</label>
+          <input id="km" type="number" placeholder="inserisci i km">
+        </div>
+        <div class="setting">
+          <label for="fascia-eta">Fascia d'et&agrave;</label>
+          <select id="fascia-eta">
+            <option value="minorenne">Minorenne</option>
+            <option value="maggiorenne">Maggiorenne</option>
+            <option value="over65">Over 65</option>
+          </select>
+        </div>
+      </div>
+      <!-- TICKET GENERATOR BUTTON -->
+      <div class="upperdata">
+        <button id="genera" class="btn">Genera</button>
+        <button id="annulla" class="btn">Annulla</button>
+      </div>
+    </div>
+    <!-- TICKET GENERATOR INFO -->
+    <h2 class="ticketquote">IL TUO BIGLIETTO</h2>
+    <div id="biglietto" class="ticketgenerator hidden">
+      <h3>Dettaglio passegeri</h3>
+      <div class="dettaglio-biglietto ticketinfo">
+        <div class="grey">
+          <h3>NOME PASSEGGERO</h3>
+          <h4 id="nome-passegero"></h4>
+        </div>
+        <div>
+          <table>
+            <tr>
+              <th>Offerta</th>
+              <th>Carrozza</th>
+              <th>Codice CP</th>
+              <th>Costo biglietto</th>
+            </tr>
+            <tr>
+              <td id="offerta"></td>
+              <td id="carrozza"></td>
+              <td id="codice-cp"></td>
+              <td id="costo-biglietto"></td>
+            </tr>
+          </table>
+<!-- INSERIMENTO BIGLIETTO ALTERNATIVO SE TABLE NON VIENE ACCETTATO -->
+          <!-- <div class="ticketfixelement">
+            <span>Offerta</span>
+            <span>Carrozza</span>
+            <span>Codice CP</span>
+            <span>Costo biglietto</span>
+          </div>
+          <div class="ticketmixelement">
+            <span id="offerta"></span>
+            <span id="carrozza"></span>
+            <span id="codice-cp"></span>
+            <span id="costo-biglietto"></span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <script src="js/myscript.js" charset="utf-8"></script>
+  </body>
+</html>

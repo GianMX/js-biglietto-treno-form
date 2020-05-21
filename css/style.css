@@ -1,0 +1,128 @@
+/* GENERAL RULES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #b91450;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+.hidden {
+  opacity: 0;
+  transition:0.1s;
+}
+.show {
+  opacity: 1;
+  transition:0.3s;
+}
+/* INSERT YOUR DATA */
+.ticketquote {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.line1 {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.upperdata {
+  display: flex;
+  justify-content: center;
+}
+.setting {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+}
+input::placeholder {
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+}
+input:focus {
+  background-color: #b91450;
+  color: white;
+}
+input:focus::placeholder {
+  color: white;
+}
+label {
+  margin-bottom: 10px;
+  color: #b91450;
+}
+input {
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #b91450;
+  padding: 10px;
+  line-height: 25px;
+  font-size: 16px;
+}
+select {
+  height: 25px;
+  border: 1px solid #b91450;
+  font-size: 16px;
+}
+select:focus {
+  background-color: #b91450;
+  color: white;
+}
+/* TICKET GENERATOR BUTTON  */
+.btn {
+  display: inline-block;
+  background-color: lightgrey;
+  color: #b91450;
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  color: white;
+  background-color: grey;
+}
+/* TICKET GENERATOR INFO */
+.ticketgenerator {
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.ticketinfo {
+  display: flex;
+  border-top: 1px solid black;
+  border-bottom: 1px solid grey;
+}
+.grey {
+  padding: 20px 10px 0px 10px;
+  background-color: grey;
+}
+th,td {
+  text-align: left;
+  padding: 15px;
+}
+ /* INSERIMENTO BIGLIETTO ALTERNATIVO SE TABLE NON VIENE ACCETTATO */
+/* .ticketinfo {
+ display: flex;
+ border-top: 1px solid black;
+ border-bottom: 1px solid grey;
+ height: 75px;
+}
+.ticketfixelement {
+  font-weight: bold;
+  padding: 15px;
+}
+.ticketmixelement {
+  padding-left: 15px;
+} */
