@@ -11,14 +11,22 @@ function() {
   var percorrenza = parseInt(inputKm.value);
   var prezzoAlKilometro = 0.21;
   var prezzoBiglietto = prezzoAlKilometro * percorrenza;
-  var offerta = "Tariffa Standard"
+  var offerta = "Tariffa Standard";
+  var errore = document.getElementById('form-errore');
+  if (nomeUtente.length == 0){
+        errore.className = 'ms_visible';
+        bigliettoDiv.classList = 'ms_hidden';
+      } else {
+          // hide error
+            errore.className = 'ms_hidden';
+          }
 // WHAT IF ? QUOTE SELECTOR BASE ON ETA
-    if (eta == "minorenne") {
-     prezzoBiglietto = (prezzoBiglietto * 0.80);
-     offerta = "Sconto Minorenne";
-    } else if (eta == "over65") {
-     prezzoBiglietto = (prezzoBiglietto * 0.60);
-     offerta = "Sconto Anzianità";
+        if (eta == "minorenne") {
+         prezzoBiglietto = (prezzoBiglietto * 0.80);
+         offerta = "Sconto Minorenne";
+        } else if (eta == "over65") {
+         prezzoBiglietto = (prezzoBiglietto * 0.60);
+         offerta = "Sconto Anzianità";
 }
 // RANDOM NUMBER GENERATOR FOR CARROZZA AND CP
 var carrozza = Math.floor(Math.random() * 9) +1;

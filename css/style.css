@@ -17,6 +17,12 @@ body {
   opacity: 1;
   transition:0.3s;
 }
+.ms_hidden{
+  display: none;
+}
+.ms_visible{
+  display: block;
+}
 /* INSERT YOUR DATA */
 .ticketquote {
   color: white;
@@ -111,6 +117,16 @@ select:focus {
 th,td {
   text-align: left;
   padding: 15px;
+}
+
+#checkme {
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+  color: white;
+  text-decoration:underline;
+  text-transform: uppercase;
+  padding-top: 15px;
 }
  /* INSERIMENTO BIGLIETTO ALTERNATIVO SE TABLE NON VIENE ACCETTATO */
 /* .ticketinfo {
