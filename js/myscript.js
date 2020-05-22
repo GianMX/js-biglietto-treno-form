@@ -3,25 +3,22 @@ var buttonGenera = document.getElementById('genera');
 buttonGenera.addEventListener( 'click',
 function() {
 // INSERT YOUR DATA
-var inputEta = document.getElementById("fascia-eta");
-var eta = inputEta.value;
-var inputNome = document.getElementById("nome-utente");
-var nomeUtente = inputNome.value;
-var inputKm = document.getElementById("km");
-var percorrenza = parseInt(inputKm.value);
-var prezzoAlKilometro = 0.21;
-var prezzoBigliettoSenzaSconto = prezzoAlKilometro * percorrenza;
-// QUOTE SECTION
-var offerta = "Tariffa Standard"
+  var inputEta = document.getElementById("fascia-eta");
+  var eta = inputEta.value;
+  var inputNome = document.getElementById("nome-utente");
+  var nomeUtente = inputNome.value;
+  var inputKm = document.getElementById("km");
+  var percorrenza = parseInt(inputKm.value);
+  var prezzoAlKilometro = 0.21;
+  var prezzoBiglietto = prezzoAlKilometro * percorrenza;
+  var offerta = "Tariffa Standard"
 // WHAT IF ? QUOTE SELECTOR BASE ON ETA
-if (eta == "minorenne") {
- prezzoBigliettoSenzaSconto = (prezzoBigliettoSenzaSconto * 0.80);
- offerta = "Sconto Minorenne";
-} else if (eta == "over65") {
- prezzoBigliettoSenzaSconto = (prezzoBigliettoSenzaSconto * 0.60);
- offerta = "Sconto Anzianità";
-} else {
- (prezzoBigliettoSenzaSconto);
+    if (eta == "minorenne") {
+     prezzoBiglietto = (prezzoBiglietto * 0.80);
+     offerta = "Sconto Minorenne";
+    } else if (eta == "over65") {
+     prezzoBiglietto = (prezzoBiglietto * 0.60);
+     offerta = "Sconto Anzianità";
 }
 // RANDOM NUMBER GENERATOR FOR CARROZZA AND CP
 var carrozza = Math.floor(Math.random() * 9) +1;
@@ -29,7 +26,7 @@ var cp = Math.floor(Math.random() * (100000 - 90000 + 1 )) + 90000;
 // TICKET GENERATOR INFO
 document.getElementById('nome-passegero').innerHTML = nomeUtente;
 document.getElementById('offerta').innerHTML = offerta;
-document.getElementById('costo-biglietto').innerHTML = prezzoBigliettoSenzaSconto.toFixed(2) + '&euro;';
+document.getElementById('costo-biglietto').innerHTML = prezzoBiglietto.toFixed(2) + '&euro;';
 document.getElementById('carrozza').innerHTML = carrozza;
 document.getElementById('codice-cp').innerHTML = cp;
 // REMOVE HIDDEN ON BIGLIETTO AND ADD SHOW
