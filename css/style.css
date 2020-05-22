@@ -17,12 +17,6 @@ body {
   opacity: 1;
   transition:0.3s;
 }
-.ms_hidden{
-  display: none;
-}
-.ms_visible{
-  display: block;
-}
 /* INSERT YOUR DATA */
 .ticketquote {
   color: white;

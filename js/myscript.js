@@ -1,32 +1,32 @@
 // GENERA BUTTON action times
 var buttonGenera = document.getElementById('genera');
-buttonGenera.addEventListener( 'click',
-function() {
+buttonGenera.addEventListener('click',
+function(){
 // INSERT YOUR DATA
-  var inputEta = document.getElementById("fascia-eta");
+  var inputEta = document.getElementById('fascia-eta');
   var eta = inputEta.value;
-  var inputNome = document.getElementById("nome-utente");
+  var inputNome = document.getElementById('nome-utente');
   var nomeUtente = inputNome.value;
-  var inputKm = document.getElementById("km");
+  var inputKm = document.getElementById('km');
   var percorrenza = parseInt(inputKm.value);
   var prezzoAlKilometro = 0.21;
   var prezzoBiglietto = prezzoAlKilometro * percorrenza;
-  var offerta = "Tariffa Standard";
+  var offerta = 'Tariffa Standard';
+// ERROR VAR
   var errore = document.getElementById('form-errore');
   if (nomeUtente.length == 0){
-        errore.className = 'ms_visible';
-        bigliettoDiv.classList = 'ms_hidden';
-      } else {
-          // hide error
-            errore.className = 'ms_hidden';
-          }
+    errore.className = 'show';
+    bigliettoDiv.classList = 'hidden';
+  } else {
+      errore.className = 'hidden';
+}
 // WHAT IF ? QUOTE SELECTOR BASE ON ETA
-        if (eta == "minorenne") {
-         prezzoBiglietto = (prezzoBiglietto * 0.80);
-         offerta = "Sconto Minorenne";
-        } else if (eta == "over65") {
-         prezzoBiglietto = (prezzoBiglietto * 0.60);
-         offerta = "Sconto Anzianità";
+      if (eta == 'minorenne') {
+       prezzoBiglietto = (prezzoBiglietto * 0.80);
+       offerta = 'Sconto Minorenne';
+      } else if (eta == 'over65') {
+       prezzoBiglietto = (prezzoBiglietto * 0.60);
+       offerta = 'Sconto Anzianità';
 }
 // RANDOM NUMBER GENERATOR FOR CARROZZA AND CP
 var carrozza = Math.floor(Math.random() * 9) +1;
@@ -45,7 +45,7 @@ bigliettoDiv.classList.add('show');
 );
 // UNDONE ACTION WITH BTN ANNULLA
 var buttonAnnulla = document.getElementById('annulla');
-buttonAnnulla.addEventListener( 'click',
+buttonAnnulla.addEventListener('click',
   function() {
     document.getElementById('nome-passegero').innerHTML = '';
     document.getElementById('offerta').innerHTML = '';
@@ -53,8 +53,8 @@ buttonAnnulla.addEventListener( 'click',
     document.getElementById('carrozza').innerHTML = '';
     document.getElementById('codice-cp').innerHTML = '';
     document.getElementById('km').value = '';
-    document.getElementById("fascia-eta").value = '';
-    document.getElementById("nome-utente").value = '';
+    document.getElementById('fascia-eta').value = '';
+    document.getElementById('nome-utente').value = '';
 // REMOVE SHOW ON BIGLIETTO AND ADD HIDDEN
     var bigliettoDiv = document.getElementById('biglietto')
     bigliettoDiv.classList.remove('show');
