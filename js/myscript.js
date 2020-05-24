@@ -14,8 +14,8 @@ function(){
   var offerta = 'Tariffa Standard';
 // ERROR VAR
   var errore = document.getElementById('form-errore');
-  if (nomeUtente.length == 0){
-    errore.className = 'show';
+  if (nomeUtente.length == 0 || isNaN(percorrenza) || eta == '--' ){
+    alert('Per favore, verifica i tuoi dati! Ricordati che il generatore per essere valido deve contenere NOME COGNOME KM E FASCIA');
     bigliettoDiv.classList = 'hidden';
   } else {
       errore.className = 'hidden';
